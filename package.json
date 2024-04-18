@@ -4,7 +4,7 @@
   "description": "Jogo cidade dorme.",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel index.html"
+    "dev": "parcel app/index.html"
   },
   "repository": {
     "type": "git",

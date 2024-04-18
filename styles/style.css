@@ -18,6 +18,22 @@ body {
 	background-color: var(--theme);
 }
 
+a {
+	width: max-content;
+	text-decoration: none;
+	padding: 0 1px;
+	margin: 0 0.3rem;
+	font-size: 1rem;
+	color: var(--black);
+	border-bottom: 1px solid var(--theme);
+}
+
+a:hover {
+  font-weight: 500;
+	color: var(--theme);
+	border-bottom: 1.8px solid var(--black);
+}
+
 h1#app-title {
 	width: fit-content;
 	line-height: 2.3rem;
@@ -41,12 +57,38 @@ header#app-header {
 	padding: 1rem;
 	background-color: var(--white);
 	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+header#app-header nav {
+	display: flex;
+	align-items: end;
+	flex-direction: row;
 }
 
 @media (min-width: 400px) {
 	h1#app-title.logo {
 		font-size: 3rem;
 		line-height: 2.3rem;
+	}
+}
+
+@media (max-width: 400px) {
+	a {
+		font-size: 0.9rem;
+		margin: 0.2rem 0.3rem;
+	}
+
+	a:hover {
+		border-bottom-width: 1px;
+	}
+
+	header#app-header nav {
+		display: flex;
+		align-items: end;
+		flex-direction: column;
 	}
 }
 
