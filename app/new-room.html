@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Modak&family=Roboto:wght@400;500;700;900&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link rel="stylesheet" href="../styles/reset.css" />
+		<link rel="stylesheet" href="../styles/style.css" />
+		<link rel="stylesheet" href="../styles/pages/new-room.css" />
+
+		<title>Criar Sala</title>
+	</head>
+
+	<body onload="methods.loadRooms()">
+		<div id="alert" class="d-none"></div>
+
+		<header id="app-header">
+			<h1 id="app-title">Cidade Dorme</h1>
+
+			<nav>
+				<a href="index.html">Salas</a>
+				<a href="new-room.html">Criar sala</a>
+				<a href="login.html">Sair</a>
+			</nav>
+		</header>
+
+		<main>
+			<section>
+				<form onsubmit="methods.create(event, this)">
+					<div class="form-main-sections">
+						<section id="input-group">
+							<label for="room-name">Nome da sala</label>
+							<input
+								id="room-name"
+								type="text"
+								placeholder="Insira o nome da sala"
+								required
+							/>
+						</section>
+
+						<div>
+							<section id="input-group">
+								<label for="players-quantity">Quantidade de jogadores</label>
+								<input
+									id="players-quantity"
+									type="number"
+									placeholder="Escolha a quantidade de jogadores"
+									min="5"
+									max="15"
+									value="15"
+									required
+								/>
+							</section>
+
+							<section id="input-group">
+								<label for="murders-quantity">Quantidade de assassinos</label>
+								<input
+									id="murders-quantity"
+									type="number"
+									placeholder="Escolha a quantidade de assassinos"
+									min="1"
+									max="5"
+									value="1"
+									required
+								/>
+							</section>
+
+							<section id="input-group">
+								<label for="detectives-quantity">Quantidade de detetives</label>
+								<input
+									id="detectives-quantity"
+									type="number"
+									placeholder="Escolha a quantidade de detetives"
+									min="1"
+									max="5"
+									value="1"
+									required
+								/>
+							</section>
+
+							<section id="input-group">
+								<label for="angels-quantity">Quantidade de anjos</label>
+								<input
+									id="angels-quantity"
+									type="number"
+									placeholder="Escolha a quantidade de anjos"
+									min="1"
+									max="5"
+									value="1"
+									required
+								/>
+							</section>
+						</div>
+					</div>
+
+					<section id="select-rooms"></section>
+
+					<button>Criar sala</button>
+				</form>
+			</section>
+		</main>
+
+		<script src="../scripts/new-room.js" type="module"></script>
+	</body>
+</html>

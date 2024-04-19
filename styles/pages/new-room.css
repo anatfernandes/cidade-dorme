@@ -1,0 +1,29 @@
+div.form-main-sections {
+	width: 100%;
+	max-width: 800px;
+	display: flex;
+	justify-content: space-between;
+}
+
+div.form-main-sections div {
+	width: 100%;
+	max-width: 400px;
+	margin-left: 1rem;
+}
+
+@media (max-width: 650px) {
+	div.form-main-sections div {
+		max-width: fit-content;
+	}
+}
+
+@media (max-width: 480px) {
+	div.form-main-sections {
+		flex-direction: column;
+	}
+
+	div.form-main-sections div {
+		margin-left: 0;
+		max-width: 100%;
+	}
+}
