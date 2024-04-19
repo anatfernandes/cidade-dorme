@@ -1,0 +1,49 @@
+section#select-rooms {
+	width: 100%;
+	max-width: 800px;
+	margin: 3rem 0;
+}
+
+section#select-rooms span.select-rooms-label {
+	display: block;
+	width: fit-content;
+	height: fit-content;
+	line-height: 2rem;
+	color: var(--black);
+}
+
+section#select-rooms > div {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+section#select-rooms article {
+	width: 140px;
+	background-color: var(--white);
+	border-radius: 5px;
+	margin: 10px;
+	overflow: hidden;
+	text-align: center;
+	box-shadow: 0 0 7px 4px rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+}
+
+section#select-rooms article:hover {
+	filter: brightness(0.9);
+}
+
+section#select-rooms article.selected {
+	border: 3px solid var(--primary);
+	filter: brightness(0.8);
+}
+
+section#select-rooms article img {
+	width: 140px;
+	height: 140px;
+}
+
+section#select-rooms article span {
+	line-height: 2rem;
+}
