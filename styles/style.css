@@ -1,3 +1,10 @@
+@import url("./common/app-title.css");
+@import url("./common/header.css");
+@import url("./common/alert.css");
+@import url("./common/form.css");
+@import url("./common/button.css");
+@import url("./common/select-rooms.css");
+
 * {
 	box-sizing: border-box;
 	transition: all 0.2s linear;
@@ -18,6 +25,10 @@ body {
 	background-color: var(--theme);
 }
 
+main {
+	padding: 2rem 2rem 5rem;
+}
+
 a {
 	width: max-content;
 	text-decoration: none;
@@ -29,50 +40,9 @@ a {
 }
 
 a:hover {
-  font-weight: 500;
+	font-weight: 500;
 	color: var(--theme);
 	border-bottom: 1.8px solid var(--black);
-}
-
-h1#app-title {
-	width: fit-content;
-	line-height: 2.3rem;
-	font-size: 3rem;
-	font-weight: 400;
-	font-style: normal;
-	font-family: "Modak", system-ui;
-	color: var(--primary);
-	background-color: initial;
-	-webkit-text-stroke: 3px var(--secondary);
-}
-
-h1#app-title.logo {
-	width: 200px;
-	line-height: 2.1rem;
-	font-size: 2.6rem;
-}
-
-header#app-header {
-	width: 100%;
-	padding: 1rem;
-	background-color: var(--white);
-	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
-
-header#app-header nav {
-	display: flex;
-	align-items: end;
-	flex-direction: row;
-}
-
-@media (min-width: 400px) {
-	h1#app-title.logo {
-		font-size: 3rem;
-		line-height: 2.3rem;
-	}
 }
 
 @media (max-width: 400px) {
@@ -85,24 +55,7 @@ header#app-header nav {
 		border-bottom-width: 1px;
 	}
 
-	header#app-header nav {
-		display: flex;
-		align-items: end;
-		flex-direction: column;
-	}
-}
-
-@media (max-width: 800px) {
-	h1#app-title {
-		line-height: 2.1rem;
-		font-size: 2.6rem;
-	}
-}
-
-@media (max-width: 650px) {
-	h1#app-title {
-		width: 200px;
-		line-height: 1.6rem;
-		font-size: 2.1rem;
+	main {
+		padding: 2rem 1rem 5rem;
 	}
 }
