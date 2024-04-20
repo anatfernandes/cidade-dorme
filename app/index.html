@@ -13,11 +13,14 @@
 
 		<link rel="stylesheet" href="../styles/reset.css" />
 		<link rel="stylesheet" href="../styles/style.css" />
+		<link rel="stylesheet" href="../styles/pages/main.css" />
 
 		<title>Cidade Dorme</title>
 	</head>
 
-	<body>
+	<body onload="methods.loadRooms()">
+		<div id="alert" class="d-none"></div>
+
 		<header id="app-header">
 			<h1 id="app-title">Cidade Dorme</h1>
 
@@ -27,5 +30,28 @@
 				<a href="login.html">Sair</a>
 			</nav>
 		</header>
+
+		<main>
+			<section id="search">
+				<input type="text" placeholder="Pesquisar pelo nome da sala" value="" />
+				<button class="rounded" onclick="methods.handleSearch()">
+					Pesquisar
+				</button>
+			</section>
+
+			<section id="buttons-group">
+				<button class="new-room rounded" onclick="methods.createRoom()">
+					Criar Sala
+				</button>
+
+				<button class="update-rooms rounded" onclick="methods.loadRooms()">
+					Atualizar Salas
+				</button>
+			</section>
+
+			<section id="rooms-list"></section>
+		</main>
 	</body>
+
+	<script src="../scripts/main.js" type="module"></script>
 </html>

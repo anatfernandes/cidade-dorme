@@ -8,6 +8,10 @@ function getRoomByName(name) {
 	return data.rooms.find((room) => room.name === name);
 }
 
+function getRoomsByNameRegex(regex) {
+	return data.rooms.filter((room) => regex.test(room.name));
+}
+
 function createRoom(room) {
 	const number = data.rooms.length + 1;
 	const newRoom = { ...room, number };
@@ -19,8 +23,9 @@ function createRoom(room) {
 
 const api = {
 	listRooms,
-	getRoomByName,
 	createRoom,
+	getRoomByName,
+	getRoomsByNameRegex,
 };
 
 export { api };

@@ -1,0 +1,98 @@
+section#search {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+}
+
+section#search input {
+	width: 100%;
+	height: 40px;
+	margin-right: 1rem;
+}
+
+section#search button {
+	width: fit-content;
+}
+
+section#buttons-group {
+	width: 100%;
+  margin: 4rem 0 1rem;
+	display: flex;
+	justify-content: end;
+}
+
+section#buttons-group button {
+	width: fit-content;
+	margin: 10px;
+	margin-right: 0;
+}
+
+section#rooms-list {
+	width: 100%;
+	padding: 1rem;
+	margin-top: 1rem;
+	border-radius: 5px;
+	box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.1);
+	background-color: var(--white);
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+article.room {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px;
+	border-radius: 5px;
+	margin: 3px;
+	background-color: var(--theme);
+	border: 2px solid transparent;
+	cursor: pointer;
+}
+
+article.room:hover,
+article.room:focus-visible {
+	border: 2px solid var(--quaternary);
+	filter: brightness(0.9);
+}
+
+article.room.disabled {
+	filter: brightness(0.8);
+	pointer-events: none;
+}
+
+article.room.limit-reached span.players {
+	color: var(--secondary);
+	font-weight: 500;
+}
+
+@media (max-width: 600px) {
+	section#rooms-list {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media (max-width: 360px) {
+	section#search,
+	section#buttons-group {
+		flex-direction: column;
+	}
+
+	section#search input {
+		margin-right: 0;
+	}
+
+	section#search button {
+		width: 100%;
+		margin-top: 0.5rem;
+	}
+
+	section#buttons-group button {
+		width: 100%;
+    margin: 4px 0;
+	}
+
+	section#rooms-list {
+		grid-template-columns: 1fr;
+	}
+}
